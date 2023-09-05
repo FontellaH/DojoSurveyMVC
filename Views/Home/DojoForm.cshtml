@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <!-- added bootsttrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form Submission</h1>
+
+        <h1 style="margin-left: 30px">Coding Dojo Survey</h1>
+        @model Dojo
+        <form action="process" method="POST">
+            <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h2>Name:</h2>
+                    </td>
+                    <td><input asp-for="Name"><span asp-validation-for="Name"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Dojo Location:</h2>
+                    </td>
+                    <td><select asp-for="Location" style="width: 168px; font-size: 20px;">
+                            
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="Spokane">Spokane</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Vancouver">Vancouver</option>
+                            <option value="Portland">Portland</option>
+                        </select>
+                        <span asp-validation-for="Location"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Favorite Language:</h2>
+                    </td>
+                    <td><select asp-for="Language" style="width: 168px; font-size: 20px;">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="C#">C#</option>
+                        </select>
+                        <span asp-validation-for="Language"></span></td>
+                        
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Comment (optional):</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <textarea asp-for="Comment"  id="" cols="60" rows="5"></textarea><br>
+            <input class="button" type="submit" value="Submit">
+        </form>
+        <span asp-validation-for="Comment"></span>
+</body>
+
+</html>

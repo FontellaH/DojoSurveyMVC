@@ -1,0 +1,51 @@
+@model Dojo
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="~/css/Index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Index</title>
+</head>
+
+<body>
+    <h1 style="margin-left: 30px">Submitted Information</h1>
+
+    <h2>Name:</h2>
+
+    <h2>@Model.Name</h2>
+
+    <h2>Dojo Location:</h2>
+
+    <!-- Placeholder for dynamic data, display location -->
+
+    <h2>@Model.Location</h2>
+
+
+
+    <h2>Favorite Language:</h2>
+
+
+    <!-- Placeholder for dynamic data, display the language -->
+
+    <h2>@Model.Language</h2>
+
+
+    <h2>Comment (optional):</h2>
+
+
+    <!-- Placeholder for the data, display the text area -->
+
+    <h2>@Model.Comment</h2>
+
+    <a  asp-action="DojoForm" asp-controller ="Home">Go Back</a>
+
+</body>
+
+</html>
+
